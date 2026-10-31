@@ -1,4 +1,4 @@
-# Настройка Kodera на Vercel
+# Настройка Kodvolt Digital на Vercel
 
 ## Параметры проекта
 
@@ -19,10 +19,10 @@
 | --- | --- |
 | `RESEND_API_KEY` | ключ Resend вида `re_...` |
 | `LEAD_TO_EMAIL` | `volodimirnedosekin@yandex.ru` |
-| `LEAD_FROM_EMAIL` | `Kodera <onboarding@resend.dev>` |
+| `LEAD_FROM_EMAIL` | `Kodvolt Digital <onboarding@resend.dev>` |
 
 4. Выполнить Redeploy последнего деплоя.
 
-Тестовый отправитель `onboarding@resend.dev` позволяет отправлять письма только на email владельца аккаунта Resend. Для отправки без этого ограничения нужно подтвердить собственный домен в Resend и заменить `LEAD_FROM_EMAIL`, например на `Kodera <site@ваш-домен.ru>`.
+Тестовый отправитель `onboarding@resend.dev` позволяет отправлять письма только на email владельца аккаунта Resend. Для отправки без этого ограничения нужно подтвердить собственный домен в Resend и заменить `LEAD_FROM_EMAIL`, например на `Kodvolt Digital <site@ваш-домен.ru>`.
 
 API-ключ нельзя добавлять в репозиторий, HTML или клиентский JavaScript.

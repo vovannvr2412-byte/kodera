@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+  <title id="title">Презентация логотипа Kodvolt Digital</title>
+  <desc id="desc">Основной логотип, компактный знак и фирменная палитра на темном фоне</desc>
+  <defs>
+    <radialGradient id="bg" cx="78%" cy="12%" r="92%">
+      <stop stop-color="#251270"/>
+      <stop offset=".42" stop-color="#0D1028"/>
+      <stop offset="1" stop-color="#070914"/>
+    </radialGradient>
+    <linearGradient id="left" x1="12" y1="8" x2="42" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D443FF"/>
+      <stop offset="1" stop-color="#7138FF"/>
+    </linearGradient>
+    <linearGradient id="right" x1="55" y1="8" x2="86" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7655FF"/>
+      <stop offset="1" stop-color="#20DDF4"/>
+    </linearGradient>
+    <linearGradient id="bolt" x1="42" y1="7" x2="57" y2="58" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset=".44" stop-color="#B8F8FF"/>
+      <stop offset="1" stop-color="#20DDF4"/>
+    </linearGradient>
+    <linearGradient id="digital" x1="0" y1="0" x2="250" y2="0">
+      <stop stop-color="#A94BFF"/>
+      <stop offset="1" stop-color="#20DDF4"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="15" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="42" height="42" patternUnits="userSpaceOnUse">
+      <path d="M42 0H0v42" fill="none" stroke="#FFFFFF" stroke-opacity=".028"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="680" rx="28" fill="url(#bg)"/>
+  <rect width="1200" height="680" rx="28" fill="url(#grid)"/>
+  <circle cx="1030" cy="-20" r="310" fill="#20DDF4" opacity=".06"/>
+  <circle cx="90" cy="700" r="320" fill="#A12EFF" opacity=".09"/>
+
+  <text x="76" y="80" fill="#B7B8C8" font-family="JetBrains Mono, Consolas, monospace" font-size="15" font-weight="700" letter-spacing="4">BRAND CONCEPT 01</text>
+
+  <g transform="translate(72 164) scale(2.05)" filter="url(#glow)">
+    <path d="M36 9 13 32l23 23" fill="none" stroke="url(#left)" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="m63 9 20 20c1.7 1.7 1.7 4.3 0 6L63 55" fill="none" stroke="url(#right)" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M53 4 35 35h13l-5 25 19-34H49L53 4Z" fill="url(#bolt)"/>
+  </g>
+  <text x="282" y="259" fill="#F7F7FC" font-family="Manrope, Arial, sans-serif" font-size="92" font-weight="800" letter-spacing="-4">KODVOLT</text>
+  <text x="289" y="313" fill="url(#digital)" font-family="JetBrains Mono, Consolas, monospace" font-size="25" font-weight="700" letter-spacing="14">DIGITAL</text>
+  <text x="78" y="405" fill="#A7A9B9" font-family="Manrope, Arial, sans-serif" font-size="25">Сайты и цифровые системы для бизнеса</text>
+
+  <line x1="76" y1="470" x2="1124" y2="470" stroke="#FFFFFF" stroke-opacity=".12"/>
+  <text x="76" y="521" fill="#747789" font-family="JetBrains Mono, Consolas, monospace" font-size="13" font-weight="700" letter-spacing="3">SIGN</text>
+  <g transform="translate(72 550)">
+    <path d="M36 9 13 32l23 23" fill="none" stroke="url(#left)" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="m63 9 20 20c1.7 1.7 1.7 4.3 0 6L63 55" fill="none" stroke="url(#right)" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M53 4 35 35h13l-5 25 19-34H49L53 4Z" fill="url(#bolt)"/>
+  </g>
+
+  <text x="300" y="521" fill="#747789" font-family="JetBrains Mono, Consolas, monospace" font-size="13" font-weight="700" letter-spacing="3">PALETTE</text>
+  <g transform="translate(300 550)" font-family="JetBrains Mono, Consolas, monospace" font-size="12" fill="#D8D9E2">
+    <rect width="110" height="54" rx="12" fill="#D443FF"/><text x="0" y="78">#D443FF</text>
+    <rect x="150" width="110" height="54" rx="12" fill="#7138FF"/><text x="150" y="78">#7138FF</text>
+    <rect x="300" width="110" height="54" rx="12" fill="#20DDF4"/><text x="300" y="78">#20DDF4</text>
+    <rect x="450" width="110" height="54" rx="12" fill="#0D1028" stroke="#FFFFFF" stroke-opacity=".14"/><text x="450" y="78">#0D1028</text>
+    <rect x="600" width="110" height="54" rx="12" fill="#F7F7FC"/><text x="600" y="78">#F7F7FC</text>
+  </g>
+</svg>

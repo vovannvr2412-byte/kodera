@@ -62,7 +62,7 @@ module.exports = async function handler(req, res) {
 
   const apiKey = process.env.RESEND_API_KEY;
   const toEmail = process.env.LEAD_TO_EMAIL || 'volodimirnedosekin@yandex.ru';
-  const fromEmail = process.env.LEAD_FROM_EMAIL || 'Kodera <onboarding@resend.dev>';
+  const fromEmail = process.env.LEAD_FROM_EMAIL || 'Kodvolt Digital <onboarding@resend.dev>';
 
   if (!apiKey) {
     return res.status(503).json({ error: 'Отправка временно не настроена' });
@@ -83,15 +83,15 @@ module.exports = async function handler(req, res) {
       body: JSON.stringify({
         from: fromEmail,
         to: [toEmail],
-        subject: `Новая заявка Kodera — ${siteType}`,
+        subject: `Новая заявка Kodvolt Digital — ${siteType}`,
         html: `
-          <h1>Новая заявка с сайта Kodera</h1>
+          <h1>Новая заявка с сайта Kodvolt Digital</h1>
           <p><strong>Имя:</strong> ${safeName}</p>
           <p><strong>Телефон:</strong> <a href="tel:${safePhone}">${safePhone}</a></p>
           <p><strong>Тип сайта:</strong> ${safeSiteType}</p>
           <p><strong>Время:</strong> ${submittedAt} (МСК)</p>
         `,
-        text: `Новая заявка с сайта Kodera\nИмя: ${name}\nТелефон: ${phone}\nТип сайта: ${siteType}\nВремя: ${submittedAt} (МСК)`
+        text: `Новая заявка с сайта Kodvolt Digital\nИмя: ${name}\nТелефон: ${phone}\nТип сайта: ${siteType}\nВремя: ${submittedAt} (МСК)`
       })
     });
 

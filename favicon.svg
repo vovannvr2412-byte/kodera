@@ -1,9 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Kodvolt Digital">
   <defs>
-    <linearGradient id="p" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#c63cff"/><stop offset="1" stop-color="#6f3cff"/></linearGradient>
-    <linearGradient id="c" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#7d5cff"/><stop offset="1" stop-color="#24d9f3"/></linearGradient>
+    <linearGradient id="p" x1="7" y1="8" x2="29" y2="56" gradientUnits="userSpaceOnUse"><stop stop-color="#D443FF"/><stop offset="1" stop-color="#7138FF"/></linearGradient>
+    <linearGradient id="c" x1="37" y1="8" x2="58" y2="56" gradientUnits="userSpaceOnUse"><stop stop-color="#7655FF"/><stop offset="1" stop-color="#20DDF4"/></linearGradient>
+    <linearGradient id="b" x1="27" y1="7" x2="39" y2="58" gradientUnits="userSpaceOnUse"><stop stop-color="#FFFFFF"/><stop offset="1" stop-color="#20DDF4"/></linearGradient>
   </defs>
-  <rect width="64" height="64" rx="14" fill="#090a19"/>
-  <polyline points="26 13 9 32 26 51" fill="none" stroke="url(#p)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
-  <polyline points="38 13 55 32 38 51" fill="none" stroke="url(#c)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect width="64" height="64" rx="14" fill="#090A19"/>
+  <path d="M26 12 9 32l17 20" fill="none" stroke="url(#p)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="m40 12 15 17c1.6 1.8 1.6 4.2 0 6L40 52" fill="none" stroke="url(#c)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M36 6 24 35h9l-3 23 13-32h-9l2-20Z" fill="url(#b)"/>
 </svg>

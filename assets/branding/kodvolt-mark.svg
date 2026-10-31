@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 64" role="img" aria-labelledby="title desc">
+  <title id="title">Знак Kodvolt Digital</title>
+  <desc id="desc">Кодовые скобки с электрическим импульсом в центре</desc>
+  <defs>
+    <linearGradient id="left" x1="12" y1="8" x2="42" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D443FF"/>
+      <stop offset="1" stop-color="#7138FF"/>
+    </linearGradient>
+    <linearGradient id="right" x1="55" y1="8" x2="86" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7655FF"/>
+      <stop offset="1" stop-color="#20DDF4"/>
+    </linearGradient>
+    <linearGradient id="bolt" x1="42" y1="7" x2="57" y2="58" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset=".44" stop-color="#B8F8FF"/>
+      <stop offset="1" stop-color="#20DDF4"/>
+    </linearGradient>
+  </defs>
+  <path d="M36 9 13 32l23 23" fill="none" stroke="url(#left)" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="m63 9 20 20c1.7 1.7 1.7 4.3 0 6L63 55" fill="none" stroke="url(#right)" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M53 4 35 35h13l-5 25 19-34H49L53 4Z" fill="url(#bolt)"/>
+</svg>
