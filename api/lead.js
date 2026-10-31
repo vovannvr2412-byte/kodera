@@ -45,7 +45,6 @@ module.exports = async function handler(req, res) {
   const siteType = SITE_TYPES.has(requestedSiteType) ? requestedSiteType : 'Не указан';
   const consent = body?.consent === true;
   const honeypot = clean(body?.website, 120);
-  const startedAt = Number(body?.startedAt);
 
   if (honeypot) return res.status(200).json({ ok: true });
 
@@ -59,10 +58,6 @@ module.exports = async function handler(req, res) {
 
   if (!consent) {
     return res.status(400).json({ error: 'Необходимо согласие на обработку данных' });
-  }
-
-  if (!Number.isFinite(startedAt) || Date.now() - startedAt < 1_500) {
-    return res.status(400).json({ error: 'Попробуйте отправить форму ещё раз' });
   }
 
   const apiKey = process.env.RESEND_API_KEY;

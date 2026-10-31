@@ -64,9 +64,6 @@ window.addEventListener('scroll', updateDesktopFab, { passive: true });
 updateDesktopFab();
 
 document.querySelectorAll('.lead-form').forEach((form) => {
-  const startedAt = form.querySelector('[name="started-at"]');
-  if (startedAt) startedAt.value = String(Date.now());
-
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
     let valid = true;
@@ -109,8 +106,7 @@ document.querySelectorAll('.lead-form').forEach((form) => {
           phone: formData.get('phone'),
           siteType,
           consent: formData.get('consent') === 'on',
-          website: formData.get('website'),
-          startedAt: Number(formData.get('started-at'))
+          website: formData.get('website')
         })
       });
 
@@ -120,7 +116,6 @@ document.querySelectorAll('.lead-form').forEach((form) => {
       status.textContent = 'Заявка отправлена. Владимир свяжется с вами в ближайшее время.';
       status.style.color = 'var(--success)';
       form.reset();
-      if (startedAt) startedAt.value = String(Date.now());
     } catch (error) {
       status.textContent = `${error.message}. Можно позвонить или написать в MAX.`;
       status.style.color = '#ff9b7d';
