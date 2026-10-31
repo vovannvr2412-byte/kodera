@@ -2,19 +2,19 @@
 
 ## Theme
 
-Тёмная графитовая тема с одним оранжевым акцентом. Страница сохраняет единый тёмный режим без инверсии секций.
+Тёмная индиго-тема Kodera с неоновой фиолетово-циановой айдентикой. Страница сохраняет единый тёмный режим без инверсии секций.
 
 ## Color
 
-- Background: `#090a0d`
-- Elevated surface: `#101217`
-- Secondary surface: `#15171d`
-- Primary text: `#f3f4f6`
-- Muted text: `#9297a3`
-- Border: `#252831`
-- Accent: `#ff7418`
-- Accent soft: `#ff9b55`
-- Success: `#4bd08b`
+- Background: `oklch(11% 0.025 285)`
+- Elevated surface: `oklch(16% 0.035 285)`
+- Secondary surface: `oklch(20% 0.045 285)`
+- Primary text: `oklch(96% 0.015 285)`
+- Muted text: `oklch(76% 0.035 285)`
+- Border: `oklch(30% 0.07 285)`
+- Primary accent: `oklch(66% 0.25 305)`
+- Cyan accent: `oklch(79% 0.15 205)`
+- Success: `oklch(78% 0.15 160)`
 
 ## Typography
 

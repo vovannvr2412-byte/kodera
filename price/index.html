@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Цены на услуги - Владимир Недосекин</title>
+  <title>Цены на услуги — Kodera</title>
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,15 +11,17 @@
   <link rel="stylesheet" href="../styles.css">
   <style>
     .price-page { width: min(900px, calc(100% - 32px)); margin: 0 auto; padding: 42px 0 100px; }
-    .price-back { color: var(--accent); font-weight: 800; }
+    .price-back { color: var(--cyan); font-weight: 800; }
+    .price-brand { display: inline-flex; align-items: center; gap: 8px; color: var(--text); font-size: 18px; }
+    .price-brand img { width: 38px; height: 26px; }
     .price-intro { color: var(--muted); font-size: 17px; line-height: 1.6; }
     .price-badges, .price-nav { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0; }
     .price-badges span, .price-nav a { padding: 9px 13px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); font-size: 12px; font-weight: 700; }
     .price-nav { position: sticky; top: 8px; z-index: 5; padding: 8px; border: 1px solid var(--line); border-radius: 14px; background: rgb(9 10 13 / .92); backdrop-filter: blur(14px); }
-    .price-nav a:first-child { color: #17100b; background: var(--text); }
+    .price-nav a:first-child { color: var(--on-accent); background: var(--brand-gradient); }
     .price-group { scroll-margin-top: 94px; margin-top: 48px; }
     .price-group > h2 { margin-bottom: 18px; font-size: 28px; }
-    .price-item { margin-bottom: 8px; border: 1px solid var(--line); border-radius: 14px; background: #121310; overflow: hidden; }
+    .price-item { margin-bottom: 8px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); overflow: hidden; }
     .price-item summary { min-height: 76px; padding: 15px 54px 15px 16px; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 16px; list-style: none; cursor: pointer; position: relative; }
     .price-item summary::-webkit-details-marker { display: none; }
     .price-item summary::after { content: "+"; position: absolute; right: 18px; color: var(--accent); font-size: 23px; }
@@ -29,22 +31,22 @@
     .price-item summary b { margin-right: 24px; font-size: 20px; white-space: nowrap; }
     .price-detail { padding: 0 16px 22px; color: #b5bac3; line-height: 1.65; }
     .price-detail ul { margin: 0; padding-left: 20px; }
-    .price-cta { margin-top: 56px; padding: 30px; border: 1px solid rgb(255 116 24 / .35); border-radius: 16px; background: rgb(255 116 24 / .1); }
+    .price-cta { margin-top: 56px; padding: 30px; border: 1px solid oklch(66% .25 305 / .38); border-radius: 16px; background: linear-gradient(125deg, oklch(66% .25 305 / .14), oklch(79% .15 205 / .06)); }
     @media (max-width: 580px) { .price-item summary { grid-template-columns: 1fr; } .price-item summary b { margin-right: 0; } .price-nav { overflow-x: auto; flex-wrap: nowrap; } .price-nav a { white-space: nowrap; } }
   </style>
 </head>
 <body>
   <main class="price-page">
-    <a class="price-back" href="../index.html">← v-nedos</a>
-    <p>Владимир Недосекин · работаю по всей России</p>
+    <a class="price-back price-brand" href="../index.html"><img src="../logo-kodera.svg" alt=""> kodera</a>
+    <p>Kodera · разработка сайтов по всей России</p>
     <h1>Прайс-лист</h1>
     <p class="price-intro">Сайты, реклама, автоматизация и приложения для малого бизнеса. Нажмите на услугу, чтобы увидеть состав работ.</p>
-    <div class="price-badges"><span>Работа по договору</span><span>Чек самозанятого</span><span>Гарантия 30 дней</span><span>Демо-версия бесплатно</span></div>
+    <div class="price-badges"><span>Сделка через Avito</span><span>Цена известна до старта</span><span>Гарантия 30 дней</span><span>Демо-версия бесплатно</span></div>
     <nav class="price-nav"><a href="#sites">Сайты</a><a href="#promo">Реклама</a><a href="#bots">Автоматизация</a><a href="#apps">Приложения</a><a href="#care">Поддержка</a></nav>
 
     <section class="price-group" id="sites"><h2>Сайты</h2>
       <details class="price-item"><summary><span><strong>Сайт-визитка на одну страницу</strong><small>До 5 блоков: о вас, услуги, цены, контакты</small></span><b>5 000 ₽</b></summary><div class="price-detail"><ul><li>Структура и тексты</li><li>Адаптация под телефоны</li><li>Форма связи и базовое SEO</li></ul></div></details>
-      <details class="price-item"><summary><span><strong>Лендинг под ключ</strong><small>8-12 блоков, анимация, форма заявки, Метрика</small></span><b>от 12 000 ₽</b></summary><div class="price-detail">Цена уточняется после обсуждения задачи и фиксируется в договоре.</div></details>
+      <details class="price-item"><summary><span><strong>Лендинг под ключ</strong><small>8-12 блоков, анимация, форма заявки, Метрика</small></span><b>от 12 000 ₽</b></summary><div class="price-detail">Цена уточняется после обсуждения задачи и согласуется до начала работ.</div></details>
       <details class="price-item"><summary><span><strong>Многостраничный сайт</strong><small>Главная, услуги, цены, о компании, контакты</small></span><b>от 16 000 ₽</b></summary><div class="price-detail">Подходит компаниям с несколькими направлениями услуг.</div></details>
       <details class="price-item"><summary><span><strong>Сайт с каталогом</strong><small>Товары, фото, цены и фильтры</small></span><b>от 20 000 ₽</b></summary><div class="price-detail">Количество позиций и способ наполнения согласуем перед стартом.</div></details>
       <details class="price-item"><summary><span><strong>Интернет-магазин</strong><small>Корзина, онлайн-оплата, уведомления</small></span><b>от 40 000 ₽</b></summary><div class="price-detail">Итог зависит от платёжной системы, доставки и состава каталога.</div></details>
