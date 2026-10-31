@@ -262,6 +262,9 @@ legend, .field { color: #c8cbd2; font-size: 12px; font-weight: 700; }
 @keyframes process-progress { 0% { transform: scaleX(0); } 70%, 100% { transform: scaleX(1); } }
 @keyframes process-step { 0%, 100% { border-color: var(--line); color: var(--text); background: var(--surface-2); } 10%, 60% { border-color: var(--cyan); color: var(--on-accent); background: var(--cyan); } }
 @keyframes fab-pulse { 0%, 100% { box-shadow: 0 10px 30px -10px var(--accent); } 50% { box-shadow: 0 10px 50px -4px var(--accent); } }
+@keyframes discount-float { from { transform: translateY(0) rotate(-7deg); } to { transform: translateY(-8px) rotate(-3deg); } }
+@keyframes mobile-bar-in { from { opacity: 0; transform: translateY(22px) scale(.98); } to { opacity: 1; transform: translateY(0) scale(1); } }
+@keyframes faq-answer-in { from { opacity: .35; transform: translateY(-6px); } to { opacity: 1; transform: translateY(0); } }
 
 @media (max-width: 1050px) {
   .main-nav { display: none; }
@@ -301,9 +304,10 @@ legend, .field { color: #c8cbd2; font-size: 12px; font-weight: 700; }
   .hero-form { display: none; }
   .mobile-lead-form { display: block; }
   .choice-grid { grid-template-columns: repeat(2, 1fr); }
-  .industry-strip { min-height: 52px; justify-content: flex-start; overflow-x: auto; font-size: 11px; mask-image: none; }
-  .industry-track { animation: none; }
-  .industry-group[aria-hidden="true"] { display: none; }
+  .industry-strip { min-height: 52px; justify-content: flex-start; overflow: hidden; font-size: 11px; mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+  .industry-track { animation-duration: 27s; }
+  .industry-group { gap: 34px; padding-right: 34px; }
+  .industry-group[aria-hidden="true"] { display: flex; }
   .section { padding-block: 74px; }
   .section h2 { font-size: 36px; }
   .section-heading-row, .works-heading { align-items: flex-start; }
@@ -318,6 +322,7 @@ legend, .field { color: #c8cbd2; font-size: 12px; font-weight: 700; }
   .work-track { margin-left: 12px; gap: 16px; }
   .work-card { flex-basis: 245px; }
   .work-phone { --frame-height: 475px; }
+  .work-card.is-visible .work-pan { animation-duration: 12s; }
   .metrics-grid, .process-grid, .guarantee-grid { grid-template-columns: 1fr; }
   .metrics-grid > div { min-height: 112px; border-right: 0; border-bottom: 1px solid var(--line); }
   .metrics-grid > div:last-child { border-bottom: 0; }
@@ -332,9 +337,14 @@ legend, .field { color: #c8cbd2; font-size: 12px; font-weight: 700; }
   .site-footer { padding-bottom: 100px; }
   .site-footer .shell { display: block; }
   .site-footer nav { margin-top: 20px; gap: 16px; }
-  .mobile-bar { position: fixed; left: 10px; right: 10px; bottom: 10px; z-index: 15; height: 58px; padding: 6px; display: grid; grid-template-columns: 48px 64px 1fr; gap: 7px; border: 1px solid #2d3139; border-radius: 14px; background: rgb(14 16 21 / .96); box-shadow: 0 12px 38px rgb(0 0 0 / .45); backdrop-filter: blur(16px); }
+  .mobile-bar { position: fixed; left: 10px; right: 10px; bottom: 10px; z-index: 15; height: 58px; padding: 6px; display: grid; grid-template-columns: 48px 64px 1fr; gap: 7px; border: 1px solid #2d3139; border-radius: 14px; background: rgb(14 16 21 / .96); box-shadow: 0 12px 38px rgb(0 0 0 / .45); backdrop-filter: blur(16px); animation: mobile-bar-in .55s var(--ease-out) .35s both; }
   .mobile-bar a { display: grid; place-items: center; border: 1px solid #2c3039; border-radius: 10px; font-size: 12px; font-weight: 800; }
   .mobile-bar .mobile-primary { border-color: var(--cyan); color: var(--on-accent); background: var(--brand-gradient); }
+  .mobile-bar a:active, .button:active, .choice-grid label:active span { transform: scale(.97); }
+  .discount { animation: discount-float 4.8s var(--ease-out) infinite alternate; }
+  .faq-list details[open] p { animation: faq-answer-in .3s var(--ease-out) both; }
+  .mobile-motion-item { opacity: .32; transform: translate3d(0, 20px, 0) scale(.985); transition: opacity .6s var(--ease-out) var(--motion-delay, 0ms), transform .6s var(--ease-out) var(--motion-delay, 0ms); }
+  .mobile-motion-item.is-motion-visible { opacity: 1; transform: translate3d(0, 0, 0) scale(1); }
   .desktop-fab { display: none; }
 }
 

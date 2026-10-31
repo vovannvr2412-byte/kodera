@@ -3,6 +3,61 @@ const workPrev = document.querySelector('#work-prev');
 const workNext = document.querySelector('#work-next');
 const workProgressBar = document.querySelector('#work-progress-bar');
 
+const mobileViewport = window.matchMedia('(max-width: 680px)');
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+function setupMobileMotion() {
+  if (!mobileViewport.matches || reducedMotion.matches || !('IntersectionObserver' in window)) return;
+
+  const motionGroups = [
+    '.review-grid',
+    '.package-grid',
+    '.work-track',
+    '.metrics-grid',
+    '.comparison-stack',
+    '.process-grid',
+    '.guarantee-grid',
+    '.faq-list'
+  ];
+  const motionItems = [];
+
+  motionGroups.forEach((selector) => {
+    const group = document.querySelector(selector);
+    if (!group) return;
+
+    [...group.children].forEach((item, index) => {
+      item.classList.add('mobile-motion-item');
+      item.style.setProperty('--motion-delay', `${Math.min(index, 4) * 55}ms`);
+      motionItems.push(item);
+    });
+  });
+
+  document.querySelectorAll('.promo-card, .mobile-lead-form, .final-cta').forEach((item) => {
+    item.classList.add('mobile-motion-item');
+    item.style.setProperty('--motion-delay', '40ms');
+    motionItems.push(item);
+  });
+
+  const motionObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      const item = entry.target;
+      item.classList.add('is-motion-visible');
+      motionObserver.unobserve(item);
+
+      const delay = Number.parseInt(item.style.getPropertyValue('--motion-delay'), 10) || 0;
+      window.setTimeout(() => {
+        item.classList.remove('mobile-motion-item', 'is-motion-visible');
+        item.style.removeProperty('--motion-delay');
+      }, 760 + delay);
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -7% 0px' });
+
+  motionItems.forEach((item) => motionObserver.observe(item));
+}
+
+setupMobileMotion();
+
 function scrollWorks(direction) {
   if (!workTrack) return;
   const cards = workTrack.querySelectorAll('.work-card');
