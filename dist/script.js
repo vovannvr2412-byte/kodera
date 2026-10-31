@@ -83,7 +83,7 @@ document.querySelectorAll('.lead-form').forEach((form) => {
 
     const status = form.querySelector('.form-status');
     status.textContent = valid
-      ? 'Форма готова. Подключим отправку после добавления ваших контактов.'
+      ? 'Система заявок пока не подключена. Позвоните или напишите в MAX.'
       : 'Проверьте обязательные поля и согласие на обработку данных.';
     status.style.color = valid ? 'var(--success)' : '#ff9b7d';
   });
