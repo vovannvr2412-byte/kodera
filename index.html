@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Сайты для бизнеса под ключ. Владимир Недосекин, веб-разработчик.">
+  <title>Сайты для бизнеса - Владимир Недосекин</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержанию</a>
+
+  <header class="site-header" id="top">
+    <div class="shell header-inner">
+      <a class="brand" href="#top" aria-label="На главную">
+        <span class="brand-mark">V.</span>
+        <span>v-nedos</span>
+      </a>
+      <nav class="main-nav" aria-label="Разделы">
+        <a href="#works">Работы</a>
+        <a href="#packs">Что делаю</a>
+        <a href="#process">Как работаю</a>
+        <a href="#faq">Вопросы</a>
+      </nav>
+      <div class="header-actions">
+        <a class="phone-link" href="#order" data-phone>+7 (___) ___-__-__</a>
+        <a class="button button-primary button-small" href="#order">Заказать сайт</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero section-grid-bg">
+      <div class="shell hero-grid">
+        <div class="hero-copy reveal">
+          <div class="person-chip">
+            <span class="person-avatar" aria-hidden="true">ВН</span>
+            <span><strong>Владимир Недосекин · веб-разработчик</strong><small>Ваш город · работаю по всей России</small></span>
+          </div>
+
+          <h1>Сайты, которые приводят <span>клиентов</span> в ваш бизнес</h1>
+          <p class="hero-lead">Лендинги, сайты-визитки и интернет-магазины под ключ: продающая структура, адаптив под телефоны, формы заявок и Яндекс Метрика.</p>
+
+          <div class="button-row">
+            <a class="button button-primary" href="#works">Смотреть работы <span aria-hidden="true">→</span></a>
+            <a class="button button-secondary" href="#order">Позвонить</a>
+          </div>
+
+          <div class="trust-row" aria-label="Преимущества">
+            <span><b>★</b> 5.0 на Авито</span>
+            <span><b>▣</b> Договор и чек</span>
+            <span><b>◇</b> Гарантия 30 дней</span>
+          </div>
+
+          <article class="promo-card">
+            <div>
+              <span class="promo-label">АКЦИЯ</span>
+              <p>Сайт-визитка под ключ</p>
+              <div class="promo-price">5 000 ₽ <s>10 000 ₽</s></div>
+              <small>Дизайн, адаптив под телефоны, форма заявок, Метрика</small>
+            </div>
+            <span class="discount">-50%<small>СКИДКА</small></span>
+            <a class="promo-action" href="#order">Забрать по акции →</a>
+          </article>
+        </div>
+
+        <form class="lead-form hero-form reveal" id="hero-order" novalidate>
+          <span class="mono-label">ЗАЯВКА · 30 СЕКУНД</span>
+          <h2>Узнайте стоимость вашего сайта</h2>
+          <fieldset>
+            <legend>Какой сайт нужен</legend>
+            <div class="choice-grid">
+              <label><input type="radio" name="site-type" value="Лендинг"><span>Лендинг</span></label>
+              <label><input type="radio" name="site-type" value="Визитка" checked><span>Визитка -50%</span></label>
+              <label><input type="radio" name="site-type" value="Магазин"><span>Магазин</span></label>
+              <label><input type="radio" name="site-type" value="Не знаю"><span>Пока не знаю</span></label>
+            </div>
+          </fieldset>
+          <label class="field">Имя<input type="text" name="name" autocomplete="name" placeholder="Как к вам обращаться" required><small class="error">Введите имя</small></label>
+          <label class="field">Телефон<input type="tel" name="phone" autocomplete="tel" placeholder="+7 (___) ___-__-__" required><small class="error">Введите телефон</small></label>
+          <label class="consent"><input type="checkbox" name="consent" required><span>Согласен на обработку персональных данных в соответствии с <a href="privacy.html">политикой конфиденциальности</a></span></label>
+          <button class="button button-primary button-wide" type="submit">Узнать стоимость</button>
+          <p class="form-note">Бесплатная консультация, без обязательств.</p>
+          <div class="form-status" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+
+    <div class="industry-strip" aria-label="Ниши бизнеса">
+      <div>Кофейни</div><div>Кровля и фасады</div><div>Клининг</div><div>Эвакуаторы</div><div>Химчистка</div><div>Мебель на заказ</div><div>Бьюти-студии</div><div>Автосервисы</div>
+    </div>
+
+    <section class="section shell" id="reviews">
+      <div class="section-heading-row">
+        <div><span class="section-kicker">ОТЗЫВЫ</span><h2>Что пишут клиенты <span>после запуска</span></h2></div>
+        <div class="rating-box"><strong>5.0</strong><span>★★★★★<small>4 отзыва на Авито</small></span></div>
+      </div>
+      <div class="review-grid">
+        <article class="review-card demo-content">
+          <div class="review-top"><span class="review-avatar avatar-orange">А</span><div><strong>Анна</strong><small>пример отзыва</small></div><b>★★★★★</b></div>
+          <p>Здесь появится реальный отзыв вашего клиента. Длинный текст сохранит тот же ритм и оформление оригинального блока.</p>
+          <strong class="review-result">Заменим вашим отзывом</strong>
+        </article>
+        <article class="review-card demo-content">
+          <div class="review-top"><span class="review-avatar avatar-green">Н</span><div><strong>Николай</strong><small>пример отзыва</small></div><b>★★★★★</b></div>
+          <p>Второй пример отзыва. После получения ваших данных здесь будет настоящий текст и подтверждённый результат.</p>
+          <strong class="review-result">Демо-материал</strong>
+        </article>
+        <article class="review-card demo-content">
+          <div class="review-top"><span class="review-avatar avatar-blue">М</span><div><strong>Мария</strong><small>пример отзыва</small></div><b>★★★★★</b></div>
+          <p>Спасибо Владимиру за сайт. Этот текст временный и не публикуется как реальная рекомендация до вашего подтверждения.</p>
+          <strong class="review-result">Требует замены</strong>
+        </article>
+      </div>
+    </section>
+
+    <section class="section shell" id="packs">
+      <span class="section-kicker">ЧТО ДЕЛАЮ</span>
+      <h2>Цены <span>и форматы</span></h2>
+      <div class="package-grid">
+        <article class="package-card">
+          <h3>Лендинг</h3><p>Одна страница под услугу, акцию или рекламу. Одна цель: заявка.</p><strong class="package-price">от 12 000 ₽</strong>
+          <ul><li>8-12 блоков, анимация</li><li>Форма заявки и Метрика</li><li>Запуск Яндекс Директа</li></ul>
+          <a class="button button-secondary button-wide" href="#order">Узнать цену</a>
+        </article>
+        <article class="package-card package-featured">
+          <span class="floating-badge">АКЦИЯ -50%</span>
+          <h3>Сайт-визитка</h3><p>Для компаний и частных специалистов: о вас, услуги, цены, контакты.</p><strong class="package-price accent">5 000 ₽ <s>10 000 ₽</s></strong>
+          <ul><li>От одной до нескольких страниц</li><li>Форма связи и кнопки звонка</li><li>Адаптив под телефоны</li></ul>
+          <a class="button button-primary button-wide" href="#order">Забрать по акции</a>
+        </article>
+        <article class="package-card">
+          <h3>Каталог и магазин</h3><p>Товары с категориями и ценами, корзина и приём заказов.</p><strong class="package-price">от 20 000 ₽</strong>
+          <ul><li>Фильтры и карточки товаров</li><li>Онлайн-оплата и уведомления</li><li>Удобное наполнение</li></ul>
+          <a class="button button-secondary button-wide" href="#order">Узнать цену</a>
+        </article>
+      </div>
+      <div class="tag-row"><span>Доработка сайтов</span><span>Яндекс Директ</span><span>Метрика с целями</span><span>Карточки на Картах и 2ГИС</span><span>Telegram-боты</span><span>Парсеры</span><a href="price/">Все цены →</a></div>
+      <form class="lead-form mobile-lead-form" id="mobile-order" novalidate>
+        <span class="mono-label">ЗАЯВКА · 30 СЕКУНД</span>
+        <h2>Узнайте стоимость вашего сайта</h2>
+        <fieldset>
+          <legend>Какой сайт нужен</legend>
+          <div class="choice-grid">
+            <label><input type="radio" name="mobile-site-type" value="Лендинг"><span>Лендинг</span></label>
+            <label><input type="radio" name="mobile-site-type" value="Визитка" checked><span>Визитка -50%</span></label>
+            <label><input type="radio" name="mobile-site-type" value="Магазин"><span>Магазин</span></label>
+            <label><input type="radio" name="mobile-site-type" value="Не знаю"><span>Пока не знаю</span></label>
+          </div>
+        </fieldset>
+        <label class="field">Имя<input type="text" name="name" autocomplete="name" placeholder="Как к вам обращаться" required><small class="error">Введите имя</small></label>
+        <label class="field">Телефон<input type="tel" name="phone" autocomplete="tel" placeholder="+7 (___) ___-__-__" required><small class="error">Введите телефон</small></label>
+        <label class="consent"><input type="checkbox" name="consent" required><span>Согласен на обработку персональных данных в соответствии с <a href="privacy.html">политикой конфиденциальности</a></span></label>
+        <button class="button button-primary button-wide" type="submit">Узнать стоимость</button>
+        <p class="form-note">Бесплатная консультация, без обязательств.</p>
+        <div class="form-status" role="status" aria-live="polite"></div>
+      </form>
+    </section>
+
+    <section class="section works-section" id="works">
+      <div class="shell">
+        <div class="works-heading"><div><span class="section-kicker">ПОРТФОЛИО · ДЕМО</span><h2>Сайты для разных ниш. <span>Листайте →</span></h2></div><div class="carousel-controls"><button type="button" id="work-prev" aria-label="Предыдущие работы">←</button><button type="button" id="work-next" aria-label="Следующие работы">→</button></div></div>
+      </div>
+      <div class="work-track" id="work-track" tabindex="0" aria-label="Демо-работы, листайте вбок">
+        <article class="work-card"><div class="phone-frame"><img src="assets/works/slivki.jpg" alt="Демо-макет сайта кофейни"></div><h3>Сливки-Булочки</h3><p>Кофейня · демо для замены</p></article>
+        <article class="work-card"><div class="phone-frame"><img src="assets/works/gi-stroy.jpg" alt="Демо-макет сайта кровельной компании"></div><h3>Ги-Строй</h3><p>Кровля и фасады · демо</p></article>
+        <article class="work-card"><div class="phone-frame"><img src="assets/works/mint.jpg" alt="Демо-макет сайта клининга"></div><h3>Mint</h3><p>Клининг · демо для замены</p></article>
+        <article class="work-card"><div class="phone-frame"><img src="assets/works/evakuator.jpg" alt="Демо-макет сайта эвакуатора"></div><h3>АМ Эвакуатор</h3><p>Эвакуатор · демо</p></article>
+        <article class="work-card"><div class="phone-frame"><img src="assets/works/himchistka.jpg" alt="Демо-макет сайта химчистки"></div><h3>Химчистка №164</h3><p>Химчистка · демо</p></article>
+        <article class="work-card"><div class="phone-frame"><img src="assets/works/vn-mebel.jpg" alt="Демо-макет сайта мебели"></div><h3>Vn Mebel</h3><p>Мебель · демо для замены</p></article>
+        <article class="work-card"><div class="phone-frame"><img src="assets/works/tork.jpg" alt="Концепт сайта автосервиса"></div><h3>ТОРК</h3><p>Автосервис · концепт</p></article>
+        <article class="work-card"><div class="phone-frame"><img src="assets/works/kovsh.jpg" alt="Концепт сайта спецтехники"></div><h3>Ковш 64</h3><p>Спецтехника · концепт</p></article>
+        <article class="work-card"><div class="phone-frame"><img src="assets/works/len.jpg" alt="Концепт сайта студии красоты"></div><h3>Лён</h3><p>Бьюти · концепт</p></article>
+        <article class="work-card"><div class="phone-frame"><img src="assets/works/zerno.jpg" alt="Концепт сайта кофейни"></div><h3>Зерно</h3><p>Кофейня · концепт</p></article>
+      </div>
+      <div class="shell metrics-grid">
+        <div><strong>+20-30%</strong><span>пример метрики, заменить данными</span></div><div><strong>от 2 дней</strong><span>запуск простого сайта</span></div><div><strong>5.0★</strong><span>рейтинг, заменить данными</span></div><div><strong>5 правок</strong><span>бесплатно, плюс 30 дней гарантии</span></div>
+      </div>
+    </section>
+
+    <section class="section shell comparison-section">
+      <span class="section-kicker">ЗАЧЕМ БИЗНЕСУ САЙТ</span>
+      <h2>Клиент выбирает того, <span>кого понял за 10 секунд</span></h2>
+      <div class="comparison-stack">
+        <article class="comparison-card muted-card"><h3>БЕЗ САЙТА</h3><p><i>×</i> Клиент видит только номер и адрес и звонит тому, у кого есть цены и примеры</p><p><i>×</i> Некуда вести рекламу, деньги уходят на клики без заявок</p><p><i>×</i> Непонятно, откуда приходят клиенты и что работает</p></article>
+        <article class="comparison-card accent-card"><h3>С САЙТОМ</h3><p><i>✓</i> Понятное предложение, цены и примеры работ, человек решает сразу</p><p><i>✓</i> Кнопка связи на каждом экране, заявки сразу в мессенджер</p><p><i>✓</i> Яндекс Метрика с целями показывает, сколько заявок дал сайт</p></article>
+      </div>
+    </section>
+
+    <section class="section shell" id="process">
+      <span class="section-kicker">КАК РАБОТАЕМ</span>
+      <h2>Четыре шага <span>до запуска</span></h2>
+      <div class="process-grid">
+        <article><b>1</b><h3>Обсуждаем задачу</h3><p>Что продаёте, кто ваши клиенты, какие сайты нравятся.</p></article>
+        <article><b>2</b><h3>Договор: цена и срок</h3><p>Фиксирую состав работ, стоимость и срок до начала.</p></article>
+        <article><b>3</b><h3>Показываю по этапам</h3><p>Вносим правки по ходу, вы видите результат заранее.</p></article>
+        <article><b>4</b><h3>Запуск и доступы</h3><p>Публикую сайт и передаю все доступы и файлы.</p></article>
+      </div>
+      <div class="guarantee-grid"><div><span>▣</span><strong>Договор</strong><small>Не соответствует: доработаю бесплатно</small></div><div><span>◇</span><strong>30 дней гарантии</strong><small>после сдачи сайта</small></div><div><span>✎</span><strong>5 правок</strong><small>бесплатно, входят в цену</small></div><div><span>▢</span><strong>Сайт ваш</strong><small>все доступы и файлы проекта</small></div></div>
+    </section>
+
+    <section class="section shell faq-section" id="faq">
+      <div><span class="section-kicker">ВОПРОСЫ</span><h2>Отвечаю <span>честно</span></h2></div>
+      <div class="faq-list">
+        <details open><summary>Сколько стоит сайт?</summary><p>Сайт-визитка стоит 5 000 ₽ по акции, лендинг от 12 000 ₽, каталог или магазин от 20 000 ₽. Итоговую цену фиксируем до начала работ.</p></details>
+        <details><summary>Почему дешевле студий?</summary><p>Вы работаете напрямую с исполнителем. Без менеджерской цепочки и лишних накладных расходов.</p></details>
+        <details><summary>Что нужно от меня?</summary><p>Коротко рассказать о бизнесе, услугах и клиентах. Остальную структуру и материалы подготовим вместе.</p></details>
+        <details><summary>Работаете по договору?</summary><p>Да. Состав работ, цена и срок фиксируются в договоре до старта.</p></details>
+        <details><summary>Кому будет принадлежать сайт?</summary><p>Вам. После запуска вы получаете файлы и все доступы.</p></details>
+      </div>
+    </section>
+
+    <section class="section shell" id="order">
+      <div class="final-cta">
+        <span class="section-kicker">СЛЕДУЮЩИЙ ШАГ</span>
+        <h2>Обсудим ваш сайт? <span>Консультация бесплатно</span></h2>
+        <p>Расскажите о бизнесе. Я назову цену и срок. Контактные данные добавим после вашего следующего сообщения.</p>
+        <strong class="final-phone" data-phone>+7 (___) ___-__-__</strong>
+        <div class="final-actions"><a class="button button-primary" href="#hero-order">Оставить заявку</a><a class="button button-secondary disabled-link" href="#order" aria-disabled="true">Написать в MAX</a><a class="button button-secondary" href="#hero-order">Позвонить</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="shell"><span>© <span data-site>ваш-сайт.ru</span> · Владимир Недосекин, веб-разработчик</span><nav aria-label="Ссылки в подвале"><a href="#top">Наверх</a><a href="privacy.html">Политика конфиденциальности</a><a href="price/">Прайс</a><a href="#order">Заказать сайт</a></nav></div></footer>
+
+  <div class="mobile-bar" aria-label="Быстрые действия"><a href="#mobile-order" aria-label="Позвонить">☎</a><a href="#order">MAX</a><a class="mobile-primary" href="#mobile-order">Узнать цену</a></div>
+  <script src="script.js"></script>
+</body>
+</html>

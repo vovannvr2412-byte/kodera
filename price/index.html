@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Цены на услуги - Владимир Недосекин</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    .price-page { width: min(900px, calc(100% - 32px)); margin: 0 auto; padding: 42px 0 100px; }
+    .price-back { color: var(--accent); font-weight: 800; }
+    .price-intro { color: var(--muted); font-size: 17px; line-height: 1.6; }
+    .price-badges, .price-nav { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0; }
+    .price-badges span, .price-nav a { padding: 9px 13px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); font-size: 12px; font-weight: 700; }
+    .price-nav { position: sticky; top: 8px; z-index: 5; padding: 8px; border: 1px solid var(--line); border-radius: 14px; background: rgb(9 10 13 / .92); backdrop-filter: blur(14px); }
+    .price-nav a:first-child { color: #17100b; background: var(--text); }
+    .price-group { scroll-margin-top: 94px; margin-top: 48px; }
+    .price-group > h2 { margin-bottom: 18px; font-size: 28px; }
+    .price-item { margin-bottom: 8px; border: 1px solid var(--line); border-radius: 14px; background: #121310; overflow: hidden; }
+    .price-item summary { min-height: 76px; padding: 15px 54px 15px 16px; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 16px; list-style: none; cursor: pointer; position: relative; }
+    .price-item summary::-webkit-details-marker { display: none; }
+    .price-item summary::after { content: "+"; position: absolute; right: 18px; color: var(--accent); font-size: 23px; }
+    .price-item[open] summary::after { content: "×"; }
+    .price-item summary strong { display: block; }
+    .price-item summary small { display: block; margin-top: 5px; color: var(--muted); }
+    .price-item summary b { margin-right: 24px; font-size: 20px; white-space: nowrap; }
+    .price-detail { padding: 0 16px 22px; color: #b5bac3; line-height: 1.65; }
+    .price-detail ul { margin: 0; padding-left: 20px; }
+    .price-cta { margin-top: 56px; padding: 30px; border: 1px solid rgb(255 116 24 / .35); border-radius: 16px; background: rgb(255 116 24 / .1); }
+    @media (max-width: 580px) { .price-item summary { grid-template-columns: 1fr; } .price-item summary b { margin-right: 0; } .price-nav { overflow-x: auto; flex-wrap: nowrap; } .price-nav a { white-space: nowrap; } }
+  </style>
+</head>
+<body>
+  <main class="price-page">
+    <a class="price-back" href="../index.html">← v-nedos</a>
+    <p>Владимир Недосекин · работаю по всей России</p>
+    <h1>Прайс-лист</h1>
+    <p class="price-intro">Сайты, реклама, автоматизация и приложения для малого бизнеса. Нажмите на услугу, чтобы увидеть состав работ.</p>
+    <div class="price-badges"><span>Работа по договору</span><span>Чек самозанятого</span><span>Гарантия 30 дней</span><span>Демо-версия бесплатно</span></div>
+    <nav class="price-nav"><a href="#sites">Сайты</a><a href="#promo">Реклама</a><a href="#bots">Автоматизация</a><a href="#apps">Приложения</a><a href="#care">Поддержка</a></nav>
+
+    <section class="price-group" id="sites"><h2>Сайты</h2>
+      <details class="price-item"><summary><span><strong>Сайт-визитка на одну страницу</strong><small>До 5 блоков: о вас, услуги, цены, контакты</small></span><b>5 000 ₽</b></summary><div class="price-detail"><ul><li>Структура и тексты</li><li>Адаптация под телефоны</li><li>Форма связи и базовое SEO</li></ul></div></details>
+      <details class="price-item"><summary><span><strong>Лендинг под ключ</strong><small>8-12 блоков, анимация, форма заявки, Метрика</small></span><b>от 12 000 ₽</b></summary><div class="price-detail">Цена уточняется после обсуждения задачи и фиксируется в договоре.</div></details>
+      <details class="price-item"><summary><span><strong>Многостраничный сайт</strong><small>Главная, услуги, цены, о компании, контакты</small></span><b>от 16 000 ₽</b></summary><div class="price-detail">Подходит компаниям с несколькими направлениями услуг.</div></details>
+      <details class="price-item"><summary><span><strong>Сайт с каталогом</strong><small>Товары, фото, цены и фильтры</small></span><b>от 20 000 ₽</b></summary><div class="price-detail">Количество позиций и способ наполнения согласуем перед стартом.</div></details>
+      <details class="price-item"><summary><span><strong>Интернет-магазин</strong><small>Корзина, онлайн-оплата, уведомления</small></span><b>от 40 000 ₽</b></summary><div class="price-detail">Итог зависит от платёжной системы, доставки и состава каталога.</div></details>
+    </section>
+
+    <section class="price-group" id="promo"><h2>Реклама и продвижение</h2>
+      <details class="price-item"><summary><span><strong>Настройка Яндекс Директ</strong><small>Поиск и рекламная сеть для готового сайта</small></span><b>от 7 000 ₽</b></summary><div class="price-detail">Структура кампаний, объявления, цели и первичная оптимизация.</div></details>
+      <details class="price-item"><summary><span><strong>Яндекс Метрика с целями</strong><small>Для существующего сайта</small></span><b>от 2 000 ₽</b></summary><div class="price-detail">Настройка счётчика, целей и проверки событий.</div></details>
+    </section>
+
+    <section class="price-group" id="bots"><h2>Боты и автоматизация</h2>
+      <details class="price-item"><summary><span><strong>Уведомления о заявках</strong><small>Заявки с сайта сразу в телефон</small></span><b>от 2 500 ₽</b></summary><div class="price-detail">Подключение Telegram или другого согласованного канала.</div></details>
+      <details class="price-item"><summary><span><strong>Telegram-бот</strong><small>Меню, ответы, сбор заявок</small></span><b>от 9 000 ₽</b></summary><div class="price-detail">Сценарий, интерфейс и способ хранения данных определим вместе.</div></details>
+    </section>
+
+    <section class="price-group" id="apps"><h2>Приложения</h2>
+      <details class="price-item"><summary><span><strong>Веб-приложение</strong><small>Учёт заявок, клиентов или финансов</small></span><b>от 45 000 ₽</b></summary><div class="price-detail">Стоимость зависит от ролей, интеграций и объёма данных.</div></details>
+      <details class="price-item"><summary><span><strong>Мобильное приложение</strong><small>Простая MVP-версия</small></span><b>от 90 000 ₽</b></summary><div class="price-detail">Точная платформа и функциональность согласуются отдельно.</div></details>
+    </section>
+
+    <section class="price-group" id="care"><h2>Поддержка</h2>
+      <details class="price-item"><summary><span><strong>Техподдержка сайта</strong><small>Мелкие правки и контроль работы</small></span><b>от 2 500 ₽/мес</b></summary><div class="price-detail">Состав задач и время реакции фиксируются заранее.</div></details>
+      <details class="price-item"><summary><span><strong>Разовая правка</strong><small>Текст, цена, фото или блок</small></span><b>от 700 ₽</b></summary><div class="price-detail">Цена зависит от сложности существующего проекта.</div></details>
+    </section>
+
+    <section class="price-cta"><h2>Обсудим ваш проект?</h2><p>Контакты и окончательные цены обновим после получения ваших данных.</p><a class="button button-primary" href="../index.html#order">Оставить заявку</a></section>
+  </main>
+  <script src="../script.js"></script>
+</body>
+</html>
