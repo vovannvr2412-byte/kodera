@@ -64,7 +64,10 @@ window.addEventListener('scroll', updateDesktopFab, { passive: true });
 updateDesktopFab();
 
 document.querySelectorAll('.lead-form').forEach((form) => {
-  form.addEventListener('submit', (event) => {
+  const startedAt = form.querySelector('[name="started-at"]');
+  if (startedAt) startedAt.value = String(Date.now());
+
+  form.addEventListener('submit', async (event) => {
     event.preventDefault();
     let valid = true;
 
@@ -82,10 +85,49 @@ document.querySelectorAll('.lead-form').forEach((form) => {
     }
 
     const status = form.querySelector('.form-status');
-    status.textContent = valid
-      ? 'Система заявок пока не подключена. Позвоните или напишите в MAX.'
-      : 'Проверьте обязательные поля и согласие на обработку данных.';
-    status.style.color = valid ? 'var(--success)' : '#ff9b7d';
+    if (!valid) {
+      status.textContent = 'Проверьте обязательные поля и согласие на обработку данных.';
+      status.style.color = '#ff9b7d';
+      return;
+    }
+
+    const submitButton = form.querySelector('button[type="submit"]');
+    const initialButtonText = submitButton.textContent;
+    const formData = new FormData(form);
+    const siteType = formData.get('site-type') || formData.get('mobile-site-type') || 'Не указан';
+
+    submitButton.disabled = true;
+    submitButton.textContent = 'Отправляем…';
+    status.textContent = '';
+
+    try {
+      const response = await fetch('/api/lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: formData.get('name'),
+          phone: formData.get('phone'),
+          siteType,
+          consent: formData.get('consent') === 'on',
+          website: formData.get('website'),
+          startedAt: Number(formData.get('started-at'))
+        })
+      });
+
+      const result = await response.json().catch(() => ({}));
+      if (!response.ok) throw new Error(result.error || 'Не удалось отправить заявку');
+
+      status.textContent = 'Заявка отправлена. Владимир свяжется с вами в ближайшее время.';
+      status.style.color = 'var(--success)';
+      form.reset();
+      if (startedAt) startedAt.value = String(Date.now());
+    } catch (error) {
+      status.textContent = `${error.message}. Можно позвонить или написать в MAX.`;
+      status.style.color = '#ff9b7d';
+    } finally {
+      submitButton.disabled = false;
+      submitButton.textContent = initialButtonText;
+    }
   });
 });
 
