@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Service Pricing — Kodvolt Digital</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    .price-page { width: min(900px, calc(100% - 32px)); margin: 0 auto; padding: 42px 0 100px; }
+    .price-top { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .price-back { color: var(--cyan); font-weight: 800; }
+    .price-brand { display: inline-flex; align-items: center; gap: 8px; color: var(--text); font-size: 18px; }
+    .price-brand img { width: 38px; height: 26px; }
+    .price-language { padding: 7px 10px; border: 1px solid var(--line); border-radius: 9px; color: var(--cyan); background: var(--surface); font-size: 12px; font-weight: 800; }
+    .price-intro { color: var(--muted); font-size: 17px; line-height: 1.6; }
+    .price-badges, .price-nav { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0; }
+    .price-badges span, .price-nav a { padding: 9px 13px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); font-size: 12px; font-weight: 700; }
+    .price-nav { position: sticky; top: 8px; z-index: 5; padding: 8px; border: 1px solid var(--line); border-radius: 14px; background: rgb(9 10 13 / .92); backdrop-filter: blur(14px); }
+    .price-nav a:first-child { color: var(--on-accent); background: var(--brand-gradient); }
+    .price-group { scroll-margin-top: 94px; margin-top: 48px; }
+    .price-group > h2 { margin-bottom: 18px; font-size: 28px; }
+    .price-item { margin-bottom: 8px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); overflow: hidden; }
+    .price-item summary { min-height: 76px; padding: 15px 54px 15px 16px; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 16px; list-style: none; cursor: pointer; position: relative; }
+    .price-item summary::-webkit-details-marker { display: none; }
+    .price-item summary::after { content: "+"; position: absolute; right: 18px; color: var(--accent); font-size: 23px; }
+    .price-item[open] summary::after { content: "×"; }
+    .price-item summary strong { display: block; }
+    .price-item summary small { display: block; margin-top: 5px; color: var(--muted); }
+    .price-item summary b { margin-right: 24px; font-size: 20px; white-space: nowrap; }
+    .price-detail { padding: 0 16px 22px; color: #b5bac3; line-height: 1.65; }
+    .price-detail ul { margin: 0; padding-left: 20px; }
+    .price-cta { margin-top: 56px; padding: 30px; border: 1px solid oklch(66% .25 305 / .38); border-radius: 16px; background: linear-gradient(125deg, oklch(66% .25 305 / .14), oklch(79% .15 205 / .06)); }
+    @media (max-width: 580px) { .price-item summary { grid-template-columns: 1fr; } .price-item summary b { margin-right: 0; } .price-nav { overflow-x: auto; flex-wrap: nowrap; } .price-nav a { white-space: nowrap; } }
+  </style>
+</head>
+<body>
+  <main class="price-page">
+    <div class="price-top"><a class="price-back price-brand" href="../index.html"><img src="../logo-kodvolt.svg" alt=""> Kodvolt Digital</a><a class="price-language" href="../price/" lang="ru">RU</a></div>
+    <p>Kodvolt Digital · websites and digital systems worldwide</p>
+    <h1>Service pricing</h1>
+    <p class="price-intro">Websites, advertising, automation and applications for small businesses. Select a service to see what is included.</p>
+    <div class="price-badges"><span>Avito-secured deal</span><span>Price confirmed before start</span><span>30-day warranty</span><span>Free demo version</span></div>
+    <nav class="price-nav"><a href="#sites">Websites</a><a href="#promo">Advertising</a><a href="#bots">Automation</a><a href="#apps">Applications</a><a href="#care">Support</a></nav>
+
+    <section class="price-group" id="sites"><h2>Websites</h2>
+      <details class="price-item"><summary><span><strong>One-page company website</strong><small>Up to 5 sections: profile, services, pricing and contacts</small></span><b>₽5,000</b></summary><div class="price-detail"><ul><li>Structure and copy</li><li>Mobile adaptation</li><li>Contact form and basic SEO</li></ul></div></details>
+      <details class="price-item"><summary><span><strong>Turnkey landing page</strong><small>8–12 sections, animation, lead form and analytics</small></span><b>from ₽12,000</b></summary><div class="price-detail">The final price is confirmed after discussing the task and before work begins.</div></details>
+      <details class="price-item"><summary><span><strong>Multi-page website</strong><small>Home, services, pricing, company and contacts</small></span><b>from ₽16,000</b></summary><div class="price-detail">Suitable for companies with several service lines.</div></details>
+      <details class="price-item"><summary><span><strong>Catalog website</strong><small>Products, photos, pricing and filters</small></span><b>from ₽20,000</b></summary><div class="price-detail">The number of items and content workflow are agreed before the start.</div></details>
+      <details class="price-item"><summary><span><strong>Online store</strong><small>Shopping cart, online payment and notifications</small></span><b>from ₽40,000</b></summary><div class="price-detail">The final price depends on payments, delivery and catalog scope.</div></details>
+    </section>
+
+    <section class="price-group" id="promo"><h2>Advertising & promotion</h2>
+      <details class="price-item"><summary><span><strong>Yandex Direct setup</strong><small>Search and display campaigns for an existing website</small></span><b>from ₽7,000</b></summary><div class="price-detail">Campaign structure, ads, goals and initial optimisation.</div></details>
+      <details class="price-item"><summary><span><strong>Yandex Metrica with goals</strong><small>For an existing website</small></span><b>from ₽2,000</b></summary><div class="price-detail">Counter installation, goal setup and event testing.</div></details>
+    </section>
+
+    <section class="price-group" id="bots"><h2>Bots & automation</h2>
+      <details class="price-item"><summary><span><strong>Lead notifications</strong><small>Website inquiries delivered straight to your phone</small></span><b>from ₽2,500</b></summary><div class="price-detail">Telegram or another agreed delivery channel.</div></details>
+      <details class="price-item"><summary><span><strong>Telegram bot</strong><small>Menu, replies and lead collection</small></span><b>from ₽9,000</b></summary><div class="price-detail">We define the flow, interface and data storage together.</div></details>
+    </section>
+
+    <section class="price-group" id="apps"><h2>Applications</h2>
+      <details class="price-item"><summary><span><strong>Web application</strong><small>Lead, customer or finance management</small></span><b>from ₽45,000</b></summary><div class="price-detail">The price depends on roles, integrations and data volume.</div></details>
+      <details class="price-item"><summary><span><strong>Mobile application</strong><small>Simple MVP version</small></span><b>from ₽90,000</b></summary><div class="price-detail">Platform and functionality are estimated separately.</div></details>
+    </section>
+
+    <section class="price-group" id="care"><h2>Support</h2>
+      <details class="price-item"><summary><span><strong>Website maintenance</strong><small>Small changes and performance monitoring</small></span><b>from ₽2,500/mo</b></summary><div class="price-detail">Task scope and response time are agreed in advance.</div></details>
+      <details class="price-item"><summary><span><strong>One-time update</strong><small>Text, price, image or section</small></span><b>from ₽700</b></summary><div class="price-detail">The price depends on the complexity of the existing project.</div></details>
+    </section>
+
+    <section class="price-cta"><h2>Let’s discuss your project.</h2><p>Tell me what you need and I will confirm the final price and timeline.</p><a class="button button-primary" href="../index.html#order">Send a request</a></section>
+  </main>
+</body>
+</html>

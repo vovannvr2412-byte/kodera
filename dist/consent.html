@@ -11,7 +11,9 @@
   <link rel="stylesheet" href="styles.css">
   <style>
     .legal { width: min(780px, calc(100% - 32px)); margin: 0 auto; padding: 48px 0 100px; }
-    .legal > a, .legal a { color: var(--accent); font-weight: 700; }
+    .legal-top { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .legal a { color: var(--accent); font-weight: 700; }
+    .legal-language { padding: 7px 10px; border: 1px solid var(--line); border-radius: 9px; color: var(--cyan) !important; background: var(--surface); }
     .legal h1 { margin: 34px 0 10px; font-size: clamp(38px, 6vw, 60px); line-height: 1.05; }
     .legal h2 { margin-top: 42px; font-size: 22px; }
     .legal p, .legal li { color: var(--muted); line-height: 1.75; }
@@ -19,7 +21,7 @@
 </head>
 <body>
   <main class="legal">
-    <a href="index.html">← На главную</a>
+    <div class="legal-top"><a href="index.html">← На главную</a><a class="legal-language" href="consent-en.html" lang="en">EN</a></div>
     <h1>Согласие на обработку персональных данных</h1>
     <p>Устанавливая отметку в форме и нажимая кнопку отправки, пользователь свободно, своей волей и в своём интересе даёт согласие физическому лицу Недосекину Владимиру Романовичу, проект Kodvolt Digital, на обработку персональных данных на следующих условиях.</p>
 

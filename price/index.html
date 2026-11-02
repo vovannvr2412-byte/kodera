@@ -11,9 +11,11 @@
   <link rel="stylesheet" href="../styles.css">
   <style>
     .price-page { width: min(900px, calc(100% - 32px)); margin: 0 auto; padding: 42px 0 100px; }
+    .price-top { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
     .price-back { color: var(--cyan); font-weight: 800; }
     .price-brand { display: inline-flex; align-items: center; gap: 8px; color: var(--text); font-size: 18px; }
     .price-brand img { width: 38px; height: 26px; }
+    .price-language { padding: 7px 10px; border: 1px solid var(--line); border-radius: 9px; color: var(--cyan); background: var(--surface); font-size: 12px; font-weight: 800; }
     .price-intro { color: var(--muted); font-size: 17px; line-height: 1.6; }
     .price-badges, .price-nav { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0; }
     .price-badges span, .price-nav a { padding: 9px 13px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); font-size: 12px; font-weight: 700; }
@@ -37,7 +39,7 @@
 </head>
 <body>
   <main class="price-page">
-    <a class="price-back price-brand" href="../index.html"><img src="../logo-kodvolt.svg" alt=""> Kodvolt Digital</a>
+    <div class="price-top"><a class="price-back price-brand" href="../index.html"><img src="../logo-kodvolt.svg" alt=""> Kodvolt Digital</a><a class="price-language" href="../price-en/" lang="en">EN</a></div>
     <p>Kodvolt Digital · сайты и цифровые системы по всей России</p>
     <h1>Прайс-лист</h1>
     <p class="price-intro">Сайты, реклама, автоматизация и приложения для малого бизнеса. Нажмите на услугу, чтобы увидеть состав работ.</p>
@@ -74,6 +76,5 @@
 
     <section class="price-cta"><h2>Обсудим ваш проект?</h2><p>Контакты и окончательные цены обновим после получения ваших данных.</p><a class="button button-primary" href="../index.html#order">Оставить заявку</a></section>
   </main>
-  <script src="../script.js"></script>
 </body>
 </html>
